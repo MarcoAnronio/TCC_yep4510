@@ -1,0 +1,13 @@
+:root {
+  --primary-2: rgba(52, 60, 106, 1);
+  --zinc-800: rgba(39, 39, 42, 1);
+  --zinc-350: rgba(200, 200, 208, 1);
+  --zinc-0: rgba(255, 255, 255, 1);
+  --uxwhite: rgba(255, 255, 255, 1);
+  --heading-one-semibold-28p-font-family: "Inter", Helvetica;
+  --heading-one-semibold-28p-font-weight: 600;
+  --heading-one-semibold-28p-font-size: 28px;
+  --heading-one-semibold-28p-letter-spacing: 0px;
+  --heading-one-semibold-28p-line-height: normal;
+  --heading-one-semibold-28p-font-style: normal;
+}

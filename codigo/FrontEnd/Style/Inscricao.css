@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* altura reduzida */
+  padding: 10px; /* padding menor */
+}
+
+.logo-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 12px 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #e6f0ff;
+  color: #004aad;
+}
+
+.profile {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.profile i.fa-user-circle {
+  color: #6c63ff;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.profile a {
+  display: block;
+  color: purple;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+main.formulario {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.subtitulo {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.etapas {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.etapa {
+  background: #ccc;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.etapa.ativa {
+  background: #0a4fa3;
+}
+
+.linha {
+  flex: 1;
+  height: 2px;
+  background: #ccc;
+  margin: 0 0.5rem;
+}
+
+.nome-etapa {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.secao {
+  border-top: 2px solid #003c88;
+  padding-top: 1rem;
+  margin-top: 2rem;
+}
+
+.secao h3 {
+  color: #003c88;
+  margin-bottom: 1rem;
+}
+
+.campo-linha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.campo-linha label {
+  width: 100%;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.campo-linha input,
+.campo-linha select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.botoes {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.botoes button {
+  background: #003c88;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botoes button:hover {
+  background: #002c5e;
+}
+

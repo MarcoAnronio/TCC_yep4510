@@ -1,0 +1,46 @@
+# Dependências JavaScript
+node_modules/
+
+# Saídas de compilação e cobertura
+build/
+dist/
+target/
+coverage/
+.cache/
+
+# Configurações locais de IDE
+.idea/
+*.iml
+
+# Variáveis de ambiente locais
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# Logs de gerenciadores de pacotes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Temporários do Microsoft Office
+~$*
+*.tmp
+
+# Arquivos locais do sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Históricos Git anteriores preservados localmente
+.git-backup/
+
+# Documentos mantidos apenas no computador
+/documentos/
+/arquivos-compactados/
+
+# Arquivos compactados
+*.zip
+*.rar

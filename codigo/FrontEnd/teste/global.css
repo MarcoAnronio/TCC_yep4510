@@ -1,0 +1,86 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+
+/* Additional styles for improved accessibility and responsiveness */
+@media (max-width: 768px) {
+  .inscrio .overlap-wrapper {
+    padding: 16px;
+  }
+
+  .inscrio .frame.menu-lateral {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .inscrio .formulrio {
+    margin-left: 0;
+  }
+
+  .inscrio .overlap-3,
+  .inscrio .overlap-5,
+  .inscrio .overlap-7,
+  .inscrio .overlap-10,
+  .inscrio .overlap-11 {
+    flex-direction: column;
+  }
+}
+
+/* Improve form element accessibility */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Improve color contrast for better readability */
+.inscrio .text-wrapper,
+.inscrio .menu-lateral a,
+.inscrio .text-wrapper-10,
+.inscrio .text-wrapper-11,
+.inscrio label,
+.inscrio .frame-10,
+.inscrio .frame-11,
+.inscrio .frame-12 {
+  color: #003366; /* Darker blue for better contrast */
+}
+
+.inscrio .p,
+.inscrio .text-wrapper-13,
+.inscrio .text-wrapper-15 {
+  color: #4d4d4d; /* Darker gray for better contrast */
+}
+
+/* Add focus styles for interactive elements */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4a90e2;
+  outline-offset: 2px;
+}
+
+/* Improve readability of small text */
+.inscrio .frame-8,
+.inscrio .frame-19 {
+  font-size: 12px;
+  line-height: 1.5;
+}

@@ -1,0 +1,26 @@
+.main-content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.photo-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 800px; /* limita a largura da imagem */
+  margin: 0 auto; /* centraliza o bloco */
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}

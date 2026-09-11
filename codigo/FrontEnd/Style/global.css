@@ -1,0 +1,101 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--ff-base);
+  line-height: 1.5;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    /*Font Families*/
+    --ff-base: "Trebuchet MS", sans-serif;
+    --ff-heading: "Verdana", sans-serif;
+
+    /*Content Colors*/
+    --rotary-royal-blue: #003399;
+    --rotary-gold: #ffcc00;
+    --rotary-metallic: #a39161;
+    --azure: #0067c8;
+    --light-gray: #777777;
+    --dark-gray: #444444;
+    --white: #ffffff;
+    --dark-blue: #143264;
+
+    /*Base Colors*/
+    --background: #fafafa;
+    --text: #333333;
+
+    /*buttons*/
+    --deafult: #304ffe;
+    --hover: #0026ca;
+    --active: #001970;
+    --disabled: #b0bec5;
+
+    --paragraph-small: 0.75rem;
+    --paragraph-medium: 0.875rem;
+    --paragraph-large: 1rem;
+    --label-small: 1rem;
+    --label-medium: 1.25rem;
+    
+    --overline: 1rem;
+
+    --display-large: 4.5rem;
+    --display-medium: 2.5rem;
+    --display-small: 2rem;
+}
+
+    html {
+    font: 500 1rem/1.3 var(--ff-base);
+    }
+  
+    h1 {
+    font-family: var(--ff-heading), sans-serif;
+    font-size: var(--display-large);
+    line-height: 1.3;
+    font-weight: 700;
+    }
+
+    h2{
+    font-family: var(--ff-heading), sans-serif;
+    font-size: var(--display-medium);
+    line-height: 1.3;
+    font-weight: 700;
+    }
+
+    h3 {
+    font-family: var(--ff-heading), sans-serif;
+    font-size: var(--display-small);
+    line-height: 1.3;
+    font-weight: 700;
+    }
+    
+
+    button {
+    font-family: var(--ff-base), sans-serif;
+    font-size: var(--label-medium);
+    line-height: 1.5;
+    font-weight: 500;
+    }   
+
+    a, a:visited, a:hover, a:active {    
+    color: inherit;
+    text-decoration: none;
+    }
+
+    a:hover {
+    text-decoration: underline;
+    }
+
+    p {
+    font-size: var(--paragraph-medium);
+    line-height: 1.5;
+    font-weight: 400;
+    }
