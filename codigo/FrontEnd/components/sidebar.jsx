@@ -24,7 +24,7 @@ function Sidebar() {
 
       <div className="profile">
         <i className="fas fa-user-circle fa-2x"></i>
-        <a href="#">Marco Antonio <i className="fas fa-sign-out-alt"></i></a>
+        <a href="#">Usuário <i className="fas fa-sign-out-alt"></i></a>
       </div>
     </aside>
   );

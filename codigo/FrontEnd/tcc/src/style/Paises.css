@@ -1,0 +1,49 @@
+.paises-section {
+  border: 2px solid #002f86;
+  background-color: #fff;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  border-radius: 8px;
+  max-width: 1200px;
+}
+
+.paises-section h2 {
+  font-size: var(--display-small);
+  color: #004c97;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bandeiras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.bandeira-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.bandeira-card:hover {
+  transform: scale(1.03);
+}
+
+.bandeira-card img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.bandeira-card span {
+  font-size: var(--paragraph-medium);
+  color: #333;
+}

@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px; /* altura reduzida */
+  padding: 10px; /* padding menor */
+}
+
+.logo-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  padding: 12px 20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #e6f0ff;
+  color: #004aad;
+}
+
+.profile {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.profile i.fa-user-circle {
+  color: #6c63ff;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.profile a {
+  display: block;
+  color: purple;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.icon{
+  padding-right: 1rem;
+}
+
+/* ==================== PERFIL / USUÁRIO ==================== */
+.profile {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--dark-gray);
+  margin-bottom: 6px;
+}
+
+.login-link {
+  display: block;
+  color: var(--rotary-royal-blue);
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.btn-logout {
+  background: none;
+  border: none;
+  color: #004aad;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.btn-logout:hover {
+  color: #001970;
+  text-decoration: underline;
+}

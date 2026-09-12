@@ -1,0 +1,11 @@
+# Copie para application.properties e configure as variáveis no ambiente.
+# O arquivo local application.properties é ignorado pelo Git.
+spring.application.name=YEP4510
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+spring.datasource.driver-class-name=com.microsoft.sqlserver.jdbc.SQLServerDriver
+spring.jpa.hibernate.ddl-auto=validate
+# Opcional, apenas para integrações de servidor. Não incluir no frontend.
+app.api.key=${API_KEY:}
+app.jwt.secret=${JWT_SECRET}

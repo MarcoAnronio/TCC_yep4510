@@ -13,8 +13,13 @@ import java.io.IOException;
 @Component
 public class ApiKeyFilter extends OncePerRequestFilter {
 
-    @Value("${app.api.key}")
-    private String apiKey;
+    private final String apiKey;
+    private final JwtUtil jwtUtil;
+
+    public ApiKeyFilter(@Value("${app.api.key:}") String apiKey, JwtUtil jwtUtil) {
+        this.apiKey = apiKey;
+        this.jwtUtil = jwtUtil;
+    }
 
     @Override
     protected void doFilterInternal(HttpServletRequest request,
@@ -41,10 +46,18 @@ public class ApiKeyFilter extends OncePerRequestFilter {
             return;
         }
 
-        // ✅ Busca a chave de aplicação no header personalizado X-Api-Key
+        // O navegador autentica com o JWT do usuário, sem uma chave compartilhada.
+        String userToken = request.getHeader("User-Token");
+        if (userToken != null && userToken.startsWith("Bearer ")
+                && jwtUtil.validateToken(userToken.substring(7))) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        // A chave opcional continua disponível para integrações de servidor.
         String header = request.getHeader("X-Api-Key");
 
-        if (header == null || !header.equals(apiKey)) {
+        if (apiKey == null || apiKey.isBlank() || header == null || !header.equals(apiKey)) {
             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             response.getWriter().write("Acesso não autorizado: token de aplicação inválido.");
             return;

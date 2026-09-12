@@ -2,19 +2,28 @@ package com.YEP4510.YEP4510.Security;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.util.Date;
 
 @Component
 public class JwtUtil {
 
-    private static final String SECRET_KEY = "MEU_SEGREDO_SUPER_SEGURO_DO_YEP4510_2025";
-
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 6; // 6h
 
-    private final Key key = Keys.hmacShaKeyFor(SECRET_KEY.getBytes());
+    private final Key key;
+
+    public JwtUtil(@Value("${app.jwt.secret:${JWT_SECRET:}}") String secret) {
+        if (secret == null || secret.isBlank()
+                || secret.getBytes(StandardCharsets.UTF_8).length < 32) {
+            throw new IllegalArgumentException(
+                    "Configure JWT_SECRET ou app.jwt.secret com pelo menos 32 bytes aleatórios.");
+        }
+        this.key = Keys.hmacShaKeyFor(secret.getBytes(StandardCharsets.UTF_8));
+    }
 
     public String generateToken(String login, String tipo) {
         return Jwts.builder()
@@ -30,7 +39,7 @@ public class JwtUtil {
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
             return true;
-        } catch (JwtException e) {
+        } catch (JwtException | IllegalArgumentException e) {
             return false;
         }
     }

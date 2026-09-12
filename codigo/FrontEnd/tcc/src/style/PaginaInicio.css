@@ -1,0 +1,300 @@
+.main-content {
+  flex: 1;
+  padding: 2.5rem; /* equivalente a 40px */
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: var(--display-small);
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+.titulo-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* espaço entre logo e texto */
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--rotary-royal-blue);
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  flex-wrap: wrap; /* permite quebra em telas pequenas */
+}
+
+.titulo-principal img {
+  height: 60px; /* altura ideal do logo */
+  width: auto; /* mantém proporção */
+  object-fit: contain;
+}
+
+
+.photo-box {
+  background: var(--white);
+  border-radius: 1rem; /* 16px */
+  padding: 1.25rem; /* 20px */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.photo-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem; /* 12px */
+  display: block;
+}
+
+/* ===============================
+   CARROSSEL
+=============================== */
+.carousel-section {
+  margin-top: 2rem;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.carousel-img.visible {
+  opacity: 1;
+  position: relative;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 2.5rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* ===============================
+   SEÇÃO SOBRE O YEP
+=============================== */
+.sobre-yep {
+  background-color: #f9f9f9;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.sobre-text {
+  flex: 1;
+}
+
+.sobre-text h2 {
+  color: var(--rotary-royal-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.sobre-text p {
+  font-size: var(--paragraph-medium);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
+}
+
+.sobre-img {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   QUADROS DE CONTEÚDO
+=============================== */
+.info-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: var(--rotary-royal-blue);
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  color: var(--dark-gray);
+  font-size: var(--paragraph-medium);
+}
+
+/* ===============================
+   FOOTER
+=============================== */
+.footer {
+  background: var(--rotary-royal-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.socials img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: opacity 0.2s;
+}
+
+.socials img:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   INTERCÂMBIO LONGA DURAÇÃO
+=============================== */
+.intercambio-longad {
+  background-color: #ffffff;
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+}
+
+.intercambio-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.intercambio-text {
+  flex: 1.5;
+}
+
+.intercambio-text h2 {
+  color: var(--rotary-royal-blue);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intercambio-text h4 {
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.intercambio-text p {
+  color: var(--dark-gray);
+  line-height: 1.6;
+  font-size: var(--paragraph-medium);
+  margin-bottom: 1rem;
+}
+
+.intercambio-text ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.intercambio-text li {
+  line-height: 1.6;
+  color: var(--dark-gray);
+}
+
+.intercambio-img {
+  flex: 1;
+  text-align: center;
+}
+
+.intercambio-img img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .intercambio-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intercambio-img img {
+    max-width: 90%;
+  }
+}
+

@@ -1,0 +1,187 @@
+/* ==============================
+   ÁREA PRINCIPAL
+============================== */
+.main-content {
+  flex: 1;
+  padding: 2.5rem; /* 40px */
+  overflow-y: auto;
+}
+
+.main-content h1 {
+  font-size: var(--display-small);
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+/* ==============================
+   TABELA DE CLASSIFICAÇÃO
+============================== */
+.table-container {
+  width: 100%;
+  margin-top: 1rem;
+  overflow-x: auto;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ranking-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--paragraph-medium);
+  table-layout: fixed;
+}
+
+.ranking-table th,
+.ranking-table td {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #ddd;
+  word-wrap: break-word;
+}
+
+.ranking-table thead {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.ranking-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ranking-table tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* ==============================
+   PAGINAÇÃO (CASO FUTURA)
+============================== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.pagination button {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.pagination button:hover {
+  background-color: #f0f0f0;
+}
+
+/* ==============================
+   BOTÃO ATRIBUIR NOTAS
+============================== */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-atribuir {
+  background-color: var(--rotary-royal-blue);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-atribuir:hover {
+  background-color: var(--dark-blue);
+  transform: scale(1.02);
+}
+
+.btn-atribuir:active {
+  transform: scale(0.98);
+}
+
+/* ==============================
+   FORMULÁRIO DE ATRIBUIR NOTAS
+============================== */
+.form-container {
+  background-color: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-container h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: #333;
+  min-width: 140px;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease;
+}
+
+.form-row input:focus {
+  border-color: var(--rotary-royal-blue);
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-cancelar {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-cancelar:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.02);
+}
+
+.btn-cancelar:active {
+  transform: scale(0.98);
+}
+
